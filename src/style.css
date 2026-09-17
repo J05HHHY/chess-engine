@@ -38,3 +38,12 @@ body {
 .square.dark {
   background: var(--square-dark);
 }
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: min(6vw, 6vh);
+  line-height: 1;
+  user-select: none;
+}
