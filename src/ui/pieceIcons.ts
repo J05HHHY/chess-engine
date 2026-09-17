@@ -18,8 +18,8 @@ const PIECE_SHAPES: Record<PieceType, string> = {
     <path d="M11 39h23l1.5 4h-26z"/>
   `,
   n: `
-    <path d="M13 39 L31 39 C33 34 34 28 32 22 C31 17 29 12 27 9 L23 3 L21 8 C18 9 15 11 13 14 L8 19 L6 23 L10 25 C11 29 12 33 12 36 Z"/>
-    <circle class="piece-eye" cx="16" cy="18" r="1.2"/>
+    <path d="M13 39 C12 36 12 33 12 31 C9 30 6 29 5 26 C6 23 9 22 11 21 C11 17 12 13 14 10 C15 8 17 6 18 5 C18 3 20 2 21 3 C22 4 22 5 21 6 C23 7 25 7 27 8 C31 9 34 14 33 20 C33 26 34 32 31 39 Z"/>
+    <circle class="piece-eye" cx="15" cy="17" r="1.1"/>
     <path d="M11 39h22l1.5 4h-25z"/>
   `,
   b: `
