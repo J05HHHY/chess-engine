@@ -1,12 +1,8 @@
-import type { Board, Piece } from "../engine/board";
+import type { Board } from "../engine/board";
+import { pieceIconMarkup } from "./pieceIcons";
 
 const FILES = 8;
 const RANKS = 8;
-
-const PIECE_GLYPHS: Record<Piece["color"], Record<Piece["type"], string>> = {
-  w: { k: "♔", q: "♕", r: "♖", b: "♗", n: "♘", p: "♙" },
-  b: { k: "♚", q: "♛", r: "♜", b: "♝", n: "♞", p: "♟" },
-};
 
 export function renderBoardGrid(container: HTMLElement, board: Board): void {
   const boardEl = document.createElement("div");
@@ -22,7 +18,7 @@ export function renderBoardGrid(container: HTMLElement, board: Board): void {
 
       const piece = board[rank][file];
       if (piece) {
-        square.textContent = PIECE_GLYPHS[piece.color][piece.type];
+        square.innerHTML = pieceIconMarkup(piece.type, piece.color);
       }
 
       boardEl.appendChild(square);
