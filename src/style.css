@@ -2,9 +2,6 @@
   color-scheme: light dark;
   --square-light: #eeeed2;
   --square-dark: #769656;
-  --piece-white-fill: #f6aab0;
-  --piece-black-fill: #8a1c34;
-  --piece-outline: #46101d;
   font-family: system-ui, sans-serif;
 }
 
@@ -52,25 +49,5 @@ body {
 .piece {
   width: 80%;
   height: 80%;
-  stroke: var(--piece-outline);
-  stroke-width: 1.3;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-
-.piece-w {
-  fill: var(--piece-white-fill);
-}
-
-.piece-b {
-  fill: var(--piece-black-fill);
-}
-
-.piece .piece-line {
-  fill: none;
-}
-
-.piece .piece-eye {
-  fill: var(--piece-outline);
-  stroke: none;
+  object-fit: contain;
 }

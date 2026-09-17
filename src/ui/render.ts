@@ -1,5 +1,5 @@
 import type { Board } from "../engine/board";
-import { pieceIconMarkup } from "./pieceIcons";
+import { pieceAltText, pieceImageSrc } from "./pieceImages";
 
 const FILES = 8;
 const RANKS = 8;
@@ -18,7 +18,11 @@ export function renderBoardGrid(container: HTMLElement, board: Board): void {
 
       const piece = board[rank][file];
       if (piece) {
-        square.innerHTML = pieceIconMarkup(piece.type, piece.color);
+        const img = document.createElement("img");
+        img.className = "piece";
+        img.src = pieceImageSrc(piece.type, piece.color);
+        img.alt = pieceAltText(piece.type, piece.color);
+        square.appendChild(img);
       }
 
       boardEl.appendChild(square);
