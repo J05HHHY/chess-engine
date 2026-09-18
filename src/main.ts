@@ -1,6 +1,6 @@
 import "./style.css";
 import { createInitialBoard, type Square } from "./engine/board";
-import { pseudoLegalMovesFrom } from "./engine/moves";
+import { legalMovesFrom } from "./engine/moves";
 import { renderBoardGrid } from "./ui/render";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
@@ -9,7 +9,7 @@ const board = createInitialBoard();
 let selected: Square | null = null;
 
 function render(): void {
-  const highlights = selected ? pseudoLegalMovesFrom(board, selected).map((move) => move.to) : [];
+  const highlights = selected ? legalMovesFrom(board, selected).map((move) => move.to) : [];
 
   renderBoardGrid(app, board, {
     selected,

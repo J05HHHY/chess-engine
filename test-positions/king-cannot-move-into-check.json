@@ -1,0 +1,12 @@
+{
+  "board": [
+    [null, null, null, null, { "color": "w", "type": "k" }, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, { "color": "b", "type": "r" }, null, null, null, null]
+  ]
+}
