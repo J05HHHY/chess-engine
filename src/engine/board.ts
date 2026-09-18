@@ -9,6 +9,11 @@ export interface Piece {
 // board[rank][file], rank 0 = rank 1 (White's back rank), file 0 = file a
 export type Board = (Piece | null)[][];
 
+export interface Square {
+  rank: number;
+  file: number;
+}
+
 const BACK_RANK: PieceType[] = ["r", "n", "b", "q", "k", "b", "n", "r"];
 
 export function createInitialBoard(): Board {
